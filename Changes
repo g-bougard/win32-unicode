@@ -1,5 +1,9 @@
 Revision history for Perl extension Win32::Unicode
 
+0.38_02 Fri Apr 18 13:20:51 2025
+        [BUG FIXES]
+        - fixed build with gcc 14
+
 0.38    Wed Aug  8 01:31:58 2012
         [NEW FEATURES]
         - added same IO::Handle like methods (suggested by bokutin++)

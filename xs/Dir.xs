@@ -50,7 +50,7 @@ find_first_file(SV* self, WCHAR *dirname)
         HANDLE handle = FindFirstFileW(dirname, &info);
         HV* hv = (HV*)SvRV(self);
         hv_stores(hv, "handle", newSVuv((DWORD)handle));
-        hv_stores(hv, "first", newSVpvn(info.cFileName, wcslen(info.cFileName) * sizeof(WCHAR)));
+        hv_stores(hv, "first", newSVpvn((char *)info.cFileName, wcslen(info.cFileName) * sizeof(WCHAR)));
 
 SV*
 find_next_file(SV* self)

@@ -42,6 +42,6 @@ foramt_message()
             NULL
         );
 
-        RETVAL = newSVpvn(buff, wcslen(buff) * sizeof(WCHAR));
+        RETVAL = newSVpvn((char *)buff, wcslen(buff) * sizeof(WCHAR));
      OUTPUT:
         RETVAL
